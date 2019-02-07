@@ -10,7 +10,9 @@ const User = require('../models/user');
 const router = new Router();
 const upload = multer({ storage: multer.diskStorage(config.multer) });
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // use SSL
   auth: config.email
 });
 
@@ -129,7 +131,9 @@ async function send(name, text, headers) {
     from: config.email.user,
     to: email,
   };
+  console.log(mailOptions);
   const result = await transporter.sendMail(mailOptions);
+  console.log(result);
 
   return result;
 }
