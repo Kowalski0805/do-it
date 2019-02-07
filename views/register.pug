@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  a(href="/") Back
+  form(action="/api/sign-up" method="POST" enctype="multipart/form-data")
+    label(for="email") E-mail
+    br
+    input(type="text" id="email" name="email")
+    br
+    br
+    label(for="password") Password
+    br
+    input(type="password" id="password" name="password")
+    br
+    br
+    label(for="avatar") Avatar
+    br
+    input(type="file" id="avatar" name="avatar")
+    br
+    br
+    input(type="submit")

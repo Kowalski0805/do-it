@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  a(href="/") Back
+  form(action="/api/email" method="POST")
+    label(for="users") Usernames (separated by comma, e.g "john,pete")
+    br
+    input(type="text" id="users" name="users")
+    br
+    br
+    label(for="text") Message
+    br
+    textarea(id="text" name="text")
+    br
+    br
+    label(for="token") Your access token
+    br
+    input(type="text" id="token" name="token")
+    br
+    br
+    input(type="submit")

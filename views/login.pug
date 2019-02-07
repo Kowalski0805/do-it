@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  a(href="/") Back
+  form(action="/api/sign-in" method="POST")
+    label(for="email") E-mail
+    br
+    input(type="text" id="email" name="email")
+    br
+    br
+    label(for="password") Password
+    br
+    input(type="password" id="password" name="password")
+    br
+    br
+    input(type="submit")
