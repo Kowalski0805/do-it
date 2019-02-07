@@ -1,6 +1,5 @@
 node_modules/
 .idea/
 public/images/*
-!public/images
-public/images/thumbs/*
-!public/images/thumbs
+!public/images/.gitkeep
+!public/images/thumbs/.gitkeep
