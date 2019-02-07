@@ -24,7 +24,8 @@ module.exports = {
     },
     production: {
       client: 'postgresql',
-      connection: 'postgresql://postgres:postgres@postgres:5432/postgres',
+      connection: process.env.DATABASE_URL ||
+        'postgresql://postgres:postgres@postgres:5432/postgres',
     },
   },
   multer: {
