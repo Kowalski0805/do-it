@@ -10,9 +10,8 @@ const User = require('../models/user');
 const router = new Router();
 const upload = multer({ storage: multer.diskStorage(config.multer) });
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true, // use SSL
+  host: 'smtp.elasticemail.com',
+  port: 2525,
   auth: config.email
 });
 
