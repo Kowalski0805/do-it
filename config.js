@@ -4,12 +4,12 @@ module.exports = {
   rounds: 10,
   tokenExpiry: 1000 * 60 * 15, // 15 minutes in milliseconds
   github: {
-    user: '',
-    pass: '',
+    user: process.env.GITHUB_USER,
+    pass: process.env.GITHUB_PASS,
   },
   email: {
-    user: '',
-    pass: '',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
     subject: 'Letter from Node.js'
   },
   weather: {
